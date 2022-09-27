@@ -1,1 +1,21 @@
-
+import time
+i=0
+while (i<=10):
+    i=i+1
+    time.sleep(5)
+    
+    import random
+    temp=random.randint(0,40)
+    hum=random.randint(1,100)
+    if temp<=20:
+        print(temp, "Low Temperature")
+    elif temperature<=30:
+        print(temp, "Normal Temperature")
+    else :
+        print(temp, "High Temperature")
+    if hum<=30:
+        print(hum, "Low Humidity")
+    elif hum<=70:
+        print(hum, "Normal Humidity")
+    else :
+        print(hum, "High Humidity")
