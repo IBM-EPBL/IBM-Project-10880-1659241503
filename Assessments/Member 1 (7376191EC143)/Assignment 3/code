@@ -1,0 +1,32 @@
+void setup()
+{
+  pinMode(13, OUTPUT); // Red  LED Output
+  pinMode(12, OUTPUT); // Amber LED Output
+  pinMode(11, OUTPUT); // Green LED Output
+}
+void loop()
+{
+  // Green LED
+  digitalWrite(13, LOW);
+  digitalWrite(12, LOW);
+  digitalWrite(11, HIGH);
+  delay(3000); // Waiting time of  3000 milliseconds
+  // Amber LED
+  digitalWrite(12, HIGH);
+  digitalWrite(11, LOW);
+  delay(1000); // Waiting time of  1000 milliseconds
+  // Red LED
+  digitalWrite(13, HIGH);
+  digitalWrite(12, LOW);
+  delay(3000); // Waiting time of  3000 milliseconds
+  // Red + Blinking Amber
+  digitalWrite(13, HIGH);
+  digitalWrite(11, LOW);
+  for (int i = 0; i < 3; i++) 
+{
+    	digitalWrite(12, HIGH);
+    	delay(500); // Waiting time of  500 milliseconds
+    	digitalWrite(12, LOW);
+    	delay(500); // Waiting time of  500 milliseconds
+  }
+}
